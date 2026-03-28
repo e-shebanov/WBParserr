@@ -142,8 +142,8 @@ async def main():
     q = "пальто из натуральной шерсти"
     # q = "носки мужские"
     enc_q = urllib.parse.quote(q)
-    url = f"https://www.wildberries.ru/catalog/0/search.aspx?search{enc_q}"
-    url = f"https://www.wildberries.ru/catalog/0/search.aspx?page=1&sort=popular&search={enc_q}&priceU=56500%3B1000000&f14177451=15000203&meta_charcs=false"
+    url = f"https://www.wildberries.ru/catalog/0/search.aspx?search={enc_q}"
+    #url = f"https://www.wildberries.ru/catalog/0/search.aspx?page=1&sort=popular&search={enc_q}&priceU=56500%3B1000000&f14177451=15000203&meta_charcs=false"
 
     async with Stealth().use_async(async_playwright()) as pw:
         browser = await pw.chromium.launch(headless=False)
